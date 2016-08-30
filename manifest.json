@@ -3,7 +3,7 @@
 
     "name" : "Inline Search",
     "description" : "Allows for quick inline search with search engines",
-    "version" : 1.0,
+    "version" : "1.0",
 
     "browser_action" : {
         "default_icon" : "icon.png",
