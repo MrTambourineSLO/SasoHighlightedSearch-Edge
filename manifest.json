@@ -10,8 +10,9 @@
         "default_popup" : "popup.html"
     },
     "options_page" : "options.html",
+    
     "background" : {
-        "scripts" : ["eventPage.js"],
+        "scripts" : ["jquery-3.1.0.min.js","eventPage.js"],
         "persistent" : false
     },
     "permissions" : [
