@@ -1,0 +1,16 @@
+.heading{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    
+}
+.panel{
+    
+    width: 600px;
+    background-color: green;
+}
+#titlePanel{
+    margin-top: 5%;
+}
