@@ -1,32 +1,28 @@
 $(document).ready(function () {
-    $("#sortable").sortable();
-    $("#sortable").disableSelection();
-    chrome.storage.sync.set({
-        'primary': $('li:first').attr('id')
-    });
-   
+   chrome.storage.sync.get("primary",function(obj){
+    alert("Search engine form memory: "+obj.primary);
+    if(obj.primary !== null){
+        $("input[value="+obj.primary+"]").prop('checked',true);
+    }
+   });
+   $("#optionsForm").submit(function(){
+       //Store value of selected checkbox
+       var selected = $("input[name=searchEngine]:checked").val();
+      
+      //Save value to storage
+      chrome.storage.sync.set({
+          'primary' : selected
+      });
+      //Notify background script that search engine has changed and that it needs to update context menu
+      chrome.runtime.sendMessage({selected});
+      //Display notification which search engine is set to primary
+      var message = {
+          type: "basic",
+          title: "Primary search engine set.",
+          message: "Your search engien has been set to: " + selected,
+          iconUrl: "icon.png"
+      }
+      chrome.notifications.create('changed',message,function(){});
 
-    
-
-
-    $("#submitSearchEngine").click(function () {
-        //Store id of first list element when submit button is clicked
-        var selectedSearchEngine = $("li:first").attr('id');
-        //Save to storage
-        chrome.storage.sync.set({
-            'primary': selectedSearchEngine
-        });
-        //Notify background script that search engine has changed & that it needs to update contextMenu
-        chrome.runtime.sendMessage({id:$('li:first').attr('id')});
-        //Display notifications which search engine is primary 
-        var message = {
-            type: "basic",
-            title: "Primary search engine set.",
-            //Autocapitalize first letter of the selected search engine
-            message: "You search engine has been set to " + selectedSearchEngine.substr(0, 1).toUpperCase() + selectedSearchEngine.substr(1),
-            iconUrl: "icon.png"
-        }
-        chrome.notifications.create('changed', message, function () { });
-    });
-
+   });
 });

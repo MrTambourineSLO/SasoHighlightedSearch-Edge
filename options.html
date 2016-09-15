@@ -2,25 +2,24 @@
 
 <html>
     <head>
-        <!-- load javascript: jQuery 1.9.1 - http://jquery.com/ -->
-        <script type="text/javascript" src="jquery-3.1.0.min.js"></script>
-
-        <!-- load javascript: Bootstrap v2.3.0 - http://twitter.github.com/bootstrap/ -->
-        <script type="text/javascript" src="../js/bootstrap.min.js"></script>
-
-        <!-- load stylesheets: Bootstrap v2.3.0 - http://twitter.github.com/bootstrap/index.html -->
-        <link rel="stylesheet" type="text/css" href="../css/bootstrap.min.css"></link>
-
-        <!-- load stylesheets: internal -->
-        <!--<link rel="stylesheet" type="text/css" href="../css/global.css"></link>-->
-        <link rel="stylesheet" type="text/css" href="../css/options.css"></link>
+        <title>Saso Context Search Options</title>
+        <link rel="stylesheet"  href="css/options.css">
+        
     </head>
     <body>
         <div class="heading">
             <h1 class="panel" id="titlePanel">Choose your default context browser</h1>
             <div class="panel" id="options" >
-                AAAAAAAAAAAAA
+                <form name="optionsForm" id="optionsForm" method="POST">
+                    <input type="radio" name="searchEngine" value="Google">Google <br />
+                    <input type="radio" name="searchEngine" value="Bing">Bing<br />
+                    <input type="radio" name="searchEngine" value="Yahoo">Yahoo<br />
+                    <input type="radio" name="searchEngine" value="Wikipedia">Wikipedia<br />
+                    <input type="submit" value="Submit">
+                </form>
             </div>
         </div>
+        <script   src="jquery-3.1.0.min.js"></script>
+        <script   src="options.js"></script>
     </body>
 </html>
