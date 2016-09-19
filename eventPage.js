@@ -5,10 +5,19 @@ var menuItem = {
     //Appear only when text is selected
     "contexts": ['selection']
 }
+//TODO: Set menu item search engine w/o waiting for event if there is already
+//a 'primary' value in chrome storage.
+chrome.storage.sync.get("primary",function(items){
+    if(items.primary !== undefined){
+        chrome.contextMenus.update(menuItem.id,{title:'Search with '+items.primary});
+        alert("From 1st storage get, primary= "+items.primary);
+    }
+});
 
+//Listen for changes made in options.js script
 document.addEventListener("DOMContentLoaded", function () {
     chrome.storage.sync.get('primary', function (items) {
-        alert(items.primary);
+        alert("Event page recieved change to: "+items.primary);
         menuItem['title'] += items.primary;
         alert(menuItem.title);
         /*Event Listener for options change*/
@@ -20,8 +29,8 @@ document.addEventListener("DOMContentLoaded", function () {
 //If there was change of primary search engine in options, update contextMenu according to
 //message recieved from options page.
 chrome.runtime.onMessage.addListener(function (message, sender, sendResponse) {
-    console.log(message.id+" recieved in event script");
-    chrome.contextMenus.update(menuItem.id,{title:'Search with '+message.id});
+    alert(message.primary   +" recieved in event script");
+    chrome.contextMenus.update(menuItem.id,{title:'Search with '+message.primary});
 });
 chrome.contextMenus.onClicked.addListener(function (clickData) {
     //Was our search item clicked in context menu and is there any text selected?

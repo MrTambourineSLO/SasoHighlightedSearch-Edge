@@ -1,6 +1,6 @@
 $(document).ready(function () {
-    $("#sortable").sortable();
-    $("#sortable").disableSelection();
+    // $("#sortable").sortable();
+    // $("#sortable").disableSelection();
     chrome.storage.sync.set({
         'primary': $('li:first').attr('id')
     });
