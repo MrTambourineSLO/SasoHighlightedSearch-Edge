@@ -39,11 +39,15 @@ chrome.contextMenus.onClicked.addListener(function (clickData) {
         var searchUrl;
         chrome.storage.sync.get('primary', function (items) {
             if (items.primary) {
-                searchUrl = items.primary + ".com/" + clickData.selectionText;
-                alert(searchUrl);
+                searchUrl ="http://www."+ items.primary + ".com/" + clickData.selectionText;
+                //alert(searchUrl);
             }
+            //Open searchUrl constructed above in the new tab
+            var resultWindow = window.open(searchUrl,'_blank');
+            resultWindow.location;  
 
         });
+            
 
     }
 });  
