@@ -39,8 +39,21 @@ chrome.contextMenus.onClicked.addListener(function (clickData) {
         var searchUrl;
         chrome.storage.sync.get('primary', function (items) {
             if (items.primary) {
-                searchUrl ="http://www."+ items.primary + ".com/" + clickData.selectionText;
-                //alert(searchUrl);
+                switch(items.primary.toLowerCase()){
+                    case 'google':
+                    searchUrl ="http://www."+ items.primary + ".com/search?q=" + clickData.selectionText;
+                    break;
+                    case 'bing':
+                    searchUrl = "http://www."+ items.primary + ".com/search?q=" + clickData.selectionText;
+                    break;
+                    case 'yahoo':
+                    searchUrl = "http://search."+ items.primary + ".com/search?q=" + clickData.selectionText;
+                    break;
+                    case 'wikipedia':
+                    searchUrl = "http://en."+ items.primary + ".org/wiki/" + clickData.selectionText;
+                }
+                
+            
             }
             //Open searchUrl constructed above in the new tab
             var resultWindow = window.open(searchUrl,'_blank');
