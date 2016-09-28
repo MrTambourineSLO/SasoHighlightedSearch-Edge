@@ -64,9 +64,14 @@ legend{
     
     width: 600px;
     background-color: white;
+
 }
+
 #titlePanel{
     margin-top: 5%;
+    text-align: center;
+    border: solid black 2px;
+    border-radius: 1em;
 }
 #button{
     background-color: #282a2d;

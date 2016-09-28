@@ -1,8 +1,13 @@
 $(document).ready(function () {
-   chrome.storage.sync.get("primary",function(items){
+    
+    chrome.storage.sync.get("primary",function(items){
     alert("Search engine form memory: "+items.primary);
     //TODO: Set default checked radio button to google if there's no value in storage for 'primary'...
-
+    if(items.primary == null){
+        alert("Setting it to google right now")
+        $("input[value='google']").prop('checked',true);
+        
+    }
 
     
     //If previous selection is still in chrome storage, check the appropriate radio button
@@ -16,6 +21,7 @@ $(document).ready(function () {
        var selected = $("input[name=searchEngine]:checked").val();
       alert("SELECTED = "+selected);
       //Save value to storage
+      
       chrome.storage.sync.set({
           'primary' : selected
       });

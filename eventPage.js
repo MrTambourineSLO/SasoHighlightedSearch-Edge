@@ -8,7 +8,7 @@ var menuItem = {
 //TODO: Set menu item search engine w/o waiting for event if there is already
 //a 'primary' value in chrome storage.
 chrome.storage.sync.get("primary",function(items){
-    if(items.primary !== undefined){
+    if(items.primary != null){
         chrome.contextMenus.update(menuItem.id,{title:'Search with '+items.primary});
         alert("From 1st storage get, primary= "+items.primary);
     }
@@ -17,8 +17,15 @@ chrome.storage.sync.get("primary",function(items){
 //Listen for changes made in options.js script
 document.addEventListener("DOMContentLoaded", function () {
     chrome.storage.sync.get('primary', function (items) {
-        alert("Event page recieved change to: "+items.primary);
-        menuItem['title'] += items.primary;
+        if(items.primary != null)
+        {
+            alert("Event page recieved change to: "+items.primary);
+            menuItem['title'] += items.primary;
+        }else{
+            alert('Undefined recived, changing to google!');
+            menuItem['title'] += 'Google';
+            chrome.storage.sync.set({'primary':'google'});
+        }
         alert(menuItem.title);
         /*Event Listener for options change*/
         //Create context item
@@ -52,6 +59,8 @@ chrome.contextMenus.onClicked.addListener(function (clickData) {
                     break;
                     case 'wikipedia':
                     searchUrl = "http://en."+ items.primary + ".org/wiki/" + clickData.selectionText;
+                    break;
+                    
                 }
                 
             

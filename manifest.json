@@ -20,6 +20,9 @@
         "notifications",
         "contextMenus"
     ],
+    "icons":{
+        "16" :"icon.png"
+    },
     "content_scripts":[
         {
             "matches" : ["<all_urls>"],
