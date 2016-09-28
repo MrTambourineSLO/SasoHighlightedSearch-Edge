@@ -11,11 +11,14 @@
             <h1 class="panel" id="titlePanel">Choose your default context browser</h1>
             <div class="panel" id="options" >
                 <form name="optionsForm" id="optionsForm" method="POST">
-                    <label for="google"><input type="radio" id="google" name="searchEngine" value="google" ><span class="radio">Google</span> </label>
-                    <label for="bing"><input type="radio" id="bing" name="searchEngine" value="bing" ><span class="radio">Bing</span></label>
-                    <label for="yahoo"><input type="radio" id="yahoo" name="searchEngine" value="yahoo" ><span class="radio">Yahoo</span></label>
-                    <label for="wikipedia"><input type="radio" id="wikipedia" name="searchEngine" value="wikipedia" ><span class="radio">Wikipedia</span></label>
-                    <input id= "button" type="submit" value="Submit">
+                    <fieldset>
+                        <legend>Choose search engine for context search</legend>
+                        <label for="google"><input type="radio" id="google" name="searchEngine" value="google" ><span class="radio">Google</span> </label>
+                        <label for="bing"><input type="radio" id="bing" name="searchEngine" value="bing" ><span class="radio">Bing</span></label>
+                        <label for="yahoo"><input type="radio" id="yahoo" name="searchEngine" value="yahoo" ><span class="radio">Yahoo</span></label>
+                        <label for="wikipedia"><input type="radio" id="wikipedia" name="searchEngine" value="wikipedia" ><span class="radio">Wikipedia</span></label>
+                        <input id= "button" type="submit" value="Submit">
+                    </fieldset>
                 </form>
             </div>
         </div>

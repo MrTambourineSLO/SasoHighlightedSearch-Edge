@@ -37,8 +37,8 @@ label {
 
 /* the checked style using the :checked pseudo class */
 [type="radio"]:checked + span:before {
-  background: black;
-  box-shadow: 0 0 0 0.25em #000;
+  background: #282a2d;
+  box-shadow: 0 0 0 0.25em #282a2d;
 }
 
 /* never forget focus styling */
@@ -47,6 +47,13 @@ label {
   font-size: 1.5em;
   line-height: 1;
   vertical-align: -0.125em;
+}
+legend{
+    font-size: 1.5em;
+    background: #282a2d;
+    border-radius: 1em;
+    color: white;
+    padding: 0.25em 1em;
 }
 
 .heading{
@@ -66,7 +73,7 @@ label {
     margin-top: 5%;
 }
 #button{
-    background-color: #008CBA;
+    background-color: #282a2d;
     border: none;
     color: white;
     padding: 15px 32px;
