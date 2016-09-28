@@ -1,4 +1,5 @@
-/*Styling radioboxes as seen @ https://www.sitepoint.com/replacing-radio-buttons-without-replacing-radio-buttons/*/
+/*Styling radioboxes as seen @ https://www.sitepoint.com/replacing-radio-buttons-without-replacing-radio-buttons/
+Ever so slightly customized though.*/
 [type="radio"] {
   border: 0; 
   clip: rect(0 0 0 0); 
@@ -42,12 +43,7 @@ label {
 }
 
 /* never forget focus styling */
-[type="radio"]:focus + span:after {
-  content: '\0020\2190';
-  font-size: 1.5em;
-  line-height: 1;
-  vertical-align: -0.125em;
-}
+
 legend{
     font-size: 1.5em;
     background: #282a2d;
