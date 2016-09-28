@@ -32,6 +32,7 @@ chrome.runtime.onMessage.addListener(function (message, sender, sendResponse) {
     alert(message.primary   +" recieved in event script");
     chrome.contextMenus.update(menuItem.id,{title:'Search with '+message.primary});
 });
+// When we click on context menu:
 chrome.contextMenus.onClicked.addListener(function (clickData) {
     //Was our search item clicked in context menu and is there any text selected?
     if (clickData.menuItemId == "searchContext" && clickData.selectionText) {
