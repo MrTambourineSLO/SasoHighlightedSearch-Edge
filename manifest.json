@@ -1,7 +1,7 @@
 {
     "manifest_version" : 2,
 
-    "name" : "Saso Highlight Search",
+    "name" : "Saso Highlighted Search",
     "description" : "Allows for a quick search of highlighted text with search engines.",
     "version" : "1.0",
 

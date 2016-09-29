@@ -44,7 +44,7 @@ document.addEventListener("DOMContentLoaded", function () {
 //message recieved from options page.
 chrome.runtime.onMessage.addListener(function (message, sender, sendResponse) {
     
-    chrome.contextMenus.update(menuItem.id,{title:'Search with '+message.primary});
+    chrome.contextMenus.update(menuItem.id,{title:'Search highlited with '+message.primary});
 });
 // When we click on context menu:
 chrome.contextMenus.onClicked.addListener(function (clickData) {
