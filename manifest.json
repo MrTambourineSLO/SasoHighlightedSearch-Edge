@@ -25,16 +25,9 @@
         "48" :"icon-48.png",
         "128" :"icon-128.png"
     },
-    "content_scripts":[
-        {
-            "matches" : ["<all_urls>"],
-            "js" : ["jquery-ui/jquery-ui.min.js"],
-            "css" : ["jquery-ui/jquery-ui.min.css"],
-            "run_at" : "document_end"
-        }],
-        "web_accessible_resources" : [
-            "jquery-ui/images*.png"
-        ]   
+    "web_accessible_resources" : [
+        "jquery-ui/images*.png"
+    ]   
     
     
 }
