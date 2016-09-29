@@ -5,6 +5,13 @@ var menuItem = {
     //Appear only when text is selected
     "contexts": ['selection']
 }
+// Functionality to open options page when left click on browser action.
+function openOptionsPage(){
+    chrome.tabs.create({
+        "url" : "options.html"
+    });
+}
+chrome.browserAction.onClicked.addListener(openOptionsPage);
 //Set menu item search engine w/o waiting for event if there is already
 //a 'primary' value in chrome storage.
 chrome.storage.sync.get("primary",function(items){
