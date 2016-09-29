@@ -5,12 +5,12 @@ var menuItem = {
     //Appear only when text is selected
     "contexts": ['selection']
 }
-//TODO: Set menu item search engine w/o waiting for event if there is already
+//Set menu item search engine w/o waiting for event if there is already
 //a 'primary' value in chrome storage.
 chrome.storage.sync.get("primary",function(items){
     if(items.primary != null){
         chrome.contextMenus.update(menuItem.id,{title:'Search with '+items.primary});
-        alert("From 1st storage get, primary= "+items.primary);
+        
     }
 });
 
@@ -19,14 +19,14 @@ document.addEventListener("DOMContentLoaded", function () {
     chrome.storage.sync.get('primary', function (items) {
         if(items.primary != null)
         {
-            alert("Event page recieved change to: "+items.primary);
+           
             menuItem['title'] += items.primary;
         }else{
-            alert('Undefined recived, changing to google!');
+            
             menuItem['title'] += 'Google';
             chrome.storage.sync.set({'primary':'google'});
         }
-        alert(menuItem.title);
+        
         /*Event Listener for options change*/
         //Create context item
         chrome.contextMenus.create(menuItem);
@@ -36,7 +36,7 @@ document.addEventListener("DOMContentLoaded", function () {
 //If there was change of primary search engine in options, update contextMenu according to
 //message recieved from options page.
 chrome.runtime.onMessage.addListener(function (message, sender, sendResponse) {
-    alert(message.primary   +" recieved in event script");
+    
     chrome.contextMenus.update(menuItem.id,{title:'Search with '+message.primary});
 });
 // When we click on context menu:
