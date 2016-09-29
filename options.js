@@ -2,7 +2,7 @@ $(document).ready(function () {
     
     chrome.storage.sync.get("primary",function(items){
     
-    //TODO: Set default checked radio button to google if there's no value in storage for 'primary'...
+    //Set default checked radio button to google if there's no value in storage for 'primary'...
     if(items.primary == null){
         
         $("input[value='google']").prop('checked',true);
