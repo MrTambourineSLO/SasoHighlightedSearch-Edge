@@ -1,8 +1,7 @@
-# Saso Highlighted Search
+# Saso Highlighted Search - Edge
 
 ## Installation
-If you want to install this plugin for google chrome, get it from the [Chrome Web Store](https://chrome.google.com/webstore/detail/saso-highlighted-search/knkjhcbjbphbaknkgddnlgiaimonhbjp)
-You can also manually load the folder with this repositorie's content in chrome://extensions of your chrome browser in the Developer mode
+Coming soon
 
 ## Usage
 This plugin is pretty straightforward, it allows you to search highlighted text from the context menu of your browser using four search
@@ -17,6 +16,7 @@ Note: All search engines are set to English language.
 To change your preferred search engine in context menu, click the white on blue looking glass icon in browser action area, select your
 preferred option and submit.
 
+This plugin is essentially a fork of my [chrome plugin](https://github.com/MrTambourineSLO/SasoHighlightedSearch). Only things changed are those scaffolded by MS Edge Extension Toolkit and some minor changes I made to replace unsupported APIs (e.g. I had to replace chrome.storage.sync with local storage and other minor tweaks).
 ## Credits
 All code, unless otherwise stated in code comments was written by me.
 
