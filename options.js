@@ -1,6 +1,6 @@
 $(document).ready(function () {
     
-    chrome.storage.sync.get("primary",function(items){
+    chrome.storage.local.get("primary",function(items){
     
     //Set default checked radio button to google if there's no value in storage for 'primary'...
     if(items.primary == null){
@@ -22,7 +22,7 @@ $(document).ready(function () {
      
       //Save value to storage
       
-      chrome.storage.sync.set({
+      chrome.storage.local.set({
           'primary' : selected
       });
       //Notify background script that search engine has changed and that it needs to update context menu
