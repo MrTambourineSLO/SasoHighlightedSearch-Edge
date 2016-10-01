@@ -41,10 +41,18 @@ engines, i.e.
 
 Note: All search engines are set to English language.
 
-To change your preferred search engine in context menu, click the white on blue looking glass icon in browser action area, select your
-preferred option and submit.
-
 This plugin is essentially a fork of my [chrome plugin](https://github.com/MrTambourineSLO/SasoHighlightedSearch). Only things changed are those scaffolded by MS Edge Extension Toolkit and some minor changes I made to replace unsupported APIs (e.g. I had to replace chrome.storage.sync with local storage and other minor tweaks).
+
+## Usage Instructions
+- Highlight the text you want to search then right click it to bring up the context menu and choose 'Search selected with...'
+
+[![Search_1.gif](http://gifyu.com/images/Search_1.gif)](http://gifyu.com/image/O4j)
+
+- To change the search engine, choose options (...) then select search engine and click submit button. Close the options windows if you want (it's not necessary) and you're ready to use selected search engine.
+
+[![Search_2.gif](http://gifyu.com/images/Search_2.gif)](http://gifyu.com/image/O4i)
+
+
 ## Credits
 All code, unless otherwise stated in code comments was written by me.
 
