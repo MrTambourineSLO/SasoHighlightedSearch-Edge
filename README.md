@@ -1,7 +1,35 @@
 # Saso Highlighted Search - Edge
 
 ## Installation
-Coming soon
+The Edge browser doesn't have a functionallity to submit plugins to windows store yet, but you can run them manually. Below are instructions how to do that.
+
+- On the very github page your are now on click 'clone or download' and 'download zip'. Extract zip folder somewhere you can remember
+if at all possible.
+
+[![Instructions_1.gif](http://gifyu.com/images/Instructions_1.gif)](http://gifyu.com/image/O4b)
+
+- Input address about:flags into your edge browser address bar and choose Enable extension developer features. After you're done you
+will have to restart the browser.
+
+[![Instructions_2.gif](http://gifyu.com/images/Instructions_2.gif)](http://gifyu.com/image/O42)
+
+- Navigate to options of your Edge browser (...) click Extensions then Load extension and select the folder where you have saved the previously downloaded unzipped file. After that restart the browser again.
+
+[![Instructions_3.gif](http://gifyu.com/images/Instructions_3.gif)](http://gifyu.com/image/O4S)
+
+- When you restart the browser a warning may occour at the bottom of the browser warning you that you are using unofficial extension. Just click 'Turn on anyway' and you're good to go.
+
+[![Instructions_4.gif](http://gifyu.com/images/Instructions_4.gif)](http://gifyu.com/image/O4v)
+
+
+
+
+
+
+
+
+
+
 
 ## Usage
 This plugin is pretty straightforward, it allows you to search highlighted text from the context menu of your browser using four search
