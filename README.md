@@ -1,5 +1,5 @@
 # Saso Highlighted Search - Edge
-[![Twitter](https://img.shields.io/twitter/url/https/github.com/MrTambourineSLO/SasoHighlightedSearch-Edge.svg?style=social)](https://twitter.com/intent/tweet?text=Wow:&url=%5Bobject%20Object%5D)
+[![Twitter](https://img.shields.io/twitter/url/https/github.com/MrTambourineSLO/SasoHighlightedSearch-Edge.svg?style=social)](https://twitter.com/intent/tweet?text=Edge extension to search highlighted text from context menu.:&url=%5Bobject%20Object%5D)
 ## Installation
 The Edge browser doesn't have a functionallity to submit plugins to windows store yet, but you can run them manually. Below are instructions how to do that.
 
